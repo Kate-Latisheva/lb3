@@ -14,13 +14,16 @@ Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access
     Type: AWS::EC2::KeyPair::KeyName
+    Default:mykey1
     ConstraintDescription: Must be the name of an existing EC2 KeyPair
   VpcId:
     Description: VPC ID where the instance will be deployed
     Type: AWS::EC2::VPC::Id
+    Default: vpc-0e5a8d9947f4b7ddb
   SubnetId:
     Description: Subnet ID for the EC2 instance
     Type: AWS::EC2::Subnet::Id
+    Default: subnet-0027b0ef05a563667
   LatestAmiId:
     Description: Latest Amazon Linux 2 AMI
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>

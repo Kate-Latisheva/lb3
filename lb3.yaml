@@ -5,7 +5,7 @@ Parameters:
   InstanceType:
     Description: EC2 instance type
     Type: String
-    Default: t2.micro
+    Default: t2.small
     AllowedValues:
       - t2.micro
       - t2.small
@@ -14,7 +14,7 @@ Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access
     Type: AWS::EC2::KeyPair::KeyName
-    Default:mykey1
+    Default: mykey1
     ConstraintDescription: Must be the name of an existing EC2 KeyPair
   VpcId:
     Description: VPC ID where the instance will be deployed
